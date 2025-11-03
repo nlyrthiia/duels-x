@@ -1,76 +1,114 @@
-![Dojo Starter](./assets/cover.png)
+# Duels X
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset=".github/mark-dark.svg">
-  <img alt="Dojo logo" align="right" width="120" src=".github/mark-light.svg">
-</picture>
+### Project Summary
 
-<a href="https://x.com/ohayo_dojo">
-<img src="https://img.shields.io/twitter/follow/dojostarknet?style=social"/>
-</a>
-<a href="https://github.com/dojoengine/dojo/stargazers">
-<img src="https://img.shields.io/github/stars/dojoengine/dojo?style=social"/>
-</a>
+Duels X (formerly Arcane Duels) is a blockchain-based card battle game built on Starknet using the Dojo framework. Players engage in strategic turn-based card combat, casting spells and wielding mystical powers to defeat opponents. The game features multiple levels of difficulty, unique card effects including damage, healing, buffs, and debuffs, with all game state and logic stored on-chain.
 
-[![discord](https://img.shields.io/badge/join-dojo-green?logo=discord&logoColor=white)](https://discord.com/invite/dojoengine)
-[![Telegram Chat][tg-badge]][tg-url]
+The game implements a rich card game mechanic where players manage resources, chain powerful spells, and adapt their strategies to counter opponent moves in epic magical duels.
 
-[tg-badge]: https://img.shields.io/endpoint?color=neon&logo=telegram&label=chat&style=flat-square&url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Fdojoengine
-[tg-url]: https://t.me/dojoengine
+### GitHub
 
-# Dojo Starter: Official Guide
+https://github.com/nlyrthiia/duels-x
 
-A quickstart guide to help you build and deploy your first Dojo provable game.
+### Play
 
-Read the full tutorial [here](https://dojoengine.org/tutorial/dojo-starter).
+https://duels-x-client-git-main-nlyrthiias-projects.vercel.app/
 
-## Running Locally
+### Video
 
-#### Terminal one (Make sure this is running)
+https://www.youtube.com/watch?v=bSJI_kUsw-s
 
-```bash
-# Run Katana
-katana --dev --dev.no-fee
-```
+### Team Members
 
-#### Terminal two
-
-```bash
-# Build the example
-sozo build
-
-# Inspect the world
-sozo inspect
-
-# Migrate the example
-sozo migrate
-
-# Start Torii
-# Replace <WORLD_ADDRESS> with the address of the deployed world from the previous step
-torii --world <WORLD_ADDRESS> --http.cors_origins "*"
-```
-
-## Docker
-You can start stack using docker compose. [Here are the installation instruction](https://docs.docker.com/engine/install/)
-
-```bash
-docker compose up
-```
-You'll get all services logs in the same terminal instance. Whenever you want to stop just ctrl+c
+- nlyrthiia - [@nlyrthiia](https://github.com/nlyrthiia)
 
 ---
 
-## Contribution
+## Game Features
 
-1. **Report a Bug**
+- **Turn-Based Combat**: Strategic card game mechanics with resource management
+- **Multiple Card Types**: Damage, Healing, Buff, Debuff, and Effect cards
+- **Special Effects**: Freeze, Shield, Double Damage, Resurrection, and Aura mechanics
+- **Deck Building**: Customize your magical arsenal for different strategies
+- **Multiple Levels**: Progressive difficulty with unique challenges at each stage
+- **On-Chain State**: Complete game logic and state verification on blockchain
+- **Cartridge Integration**: Seamless wallet connection and authentication
 
-    - If you think you have encountered a bug, and we should know about it, feel free to report it [here](https://github.com/dojoengine/dojo-starter/issues) and we will take care of it.
+## How to Play
 
-2. **Request a Feature**
+1. **Connect Your Wallet**: Use Cartridge Controller to authenticate and spawn your player
+2. **Spawn Your Character**: Initialize your on-chain player with starting stats
+3. **Build Your Deck**: Assemble your collection of magical cards
+4. **Start a Match**: Challenge opponents in strategic card battles
+5. **Play Your Hand**:
+   - Draw cards each turn
+   - Cast spells and use effects
+   - Manage your health and resources
+6. **Win the Duel**: Defeat your opponent by reducing their HP to zero
 
-    - You can also request for a feature [here](https://github.com/dojoengine/dojo-starter/issues), and if it's viable, it will be picked for development.
+## Card Types
 
-3. **Create a Pull Request**
-    - It can't get better then this, your pull request will be appreciated by the community.
+- **Damage Cards**: Deal direct damage to opponents with spells like Fireball, Frost, and Thunder
+- **Healing Cards**: Restore your HP and stay in the fight longer
+- **Buff Cards**: Enhance your attack and defense capabilities
+- **Debuff Cards**: Weaken your opponent's powers
+- **Effect Cards**: Special magical effects with unique properties
 
-Happy coding!
+## Combat Mechanics
+
+- **HP (Health Points)**: Reach 0 and you lose the duel
+- **ATK (Attack Power)**: Increases damage dealt with your attacks
+- **DEF (Defense Power)**: Reduces damage taken from opponents
+- **Card Effects**: Chain powerful effects for devastating combinations
+- **Turn Management**: Carefully manage your cards each turn
+
+## Special Effects
+
+- **Freeze**: Nullify opponent's next spell
+- **Shield**: Magical barrier against incoming damage
+- **Double Damage**: Amplify your next attack
+- **Resurrection**: Cheat death once per match
+- **Aura**: Continuous magical effects that persist between turns
+
+## Technical Details
+
+Built on:
+
+- **Starknet**: Layer 2 blockchain for scalable, low-cost transactions
+- **Dojo Engine**: Autonomous World framework for on-chain game state
+- **Cartridge Controller**: Web3 wallet integration and session management
+- **React**: Modern frontend with Vite build system
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- Dojo toolchain installed
+- Starknet wallet (Cartridge Controller recommended)
+
+### Installation
+
+```bash
+# Install dependencies
+cd client && npm install
+
+# Build contracts
+sozo -P sepolia build
+
+# Start development server
+npm run dev
+```
+
+### Deployment
+
+```bash
+# Deploy to Sepolia testnet
+export DOJO_ACCOUNT_ADDRESS=0x...
+export DOJO_PRIVATE_KEY=0x...
+./deploy-sepolia.sh
+```
+
+## License
+
+MIT License

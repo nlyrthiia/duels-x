@@ -1343,7 +1343,7 @@
     },
     {
       "address": "0x2a473da7f123417d3786b021b98f7b167ec941abadbca4e655e0c76c2dc6cc1",
-      "class_hash": "0x2b958048ff658408a87d32328bbec62d4e41d8aa1caa298e2268443bf175559",
+      "class_hash": "0x12eb71c6ef86db03896b5903ed2e05e4595acb7991afdb06f617f9e4f9fa06b",
       "init_calldata": [],
       "tag": "dojo_starter-arcane_game",
       "selector": "0x19d6aef8a69554e8653a4d365212946b3ab546354576401b22d04f2d30ea6b5",
@@ -1462,9 +1462,14 @@
           "name": "seed",
           "type": "core::integer::u64",
           "key": false
+        },
+        {
+          "name": "winner",
+          "type": "core::option::Option::<core::starknet::contract_address::ContractAddress>",
+          "key": false
         }
       ],
-      "class_hash": "0x721961835489bdc6e1f742ca8c3a3706369b874f69784c1a93c76469eea59fb",
+      "class_hash": "0x54caa285d4ee91831dd86a93de52cd65556945734c3f39f2fb1b0875709a482",
       "tag": "dojo_starter-Match",
       "selector": "0x38756f02a55eb534674ef0e5f851b77adff15b5e9bfe96b03ea8329fe99bd72"
     },
@@ -1533,9 +1538,24 @@
           "name": "created",
           "type": "core::bool",
           "key": false
+        },
+        {
+          "name": "hp",
+          "type": "core::integer::u32",
+          "key": false
+        },
+        {
+          "name": "atk",
+          "type": "core::integer::u32",
+          "key": false
+        },
+        {
+          "name": "def",
+          "type": "core::integer::u32",
+          "key": false
         }
       ],
-      "class_hash": "0x525f0f73d25565f0a36a4379893ebac3f341c8101794076e6d1b6139374007f",
+      "class_hash": "0x73c0574515e9c85b7dcceff01900cdc3a2084d253df8b6dbd1bd17f4b49aeab",
       "tag": "dojo_starter-Player",
       "selector": "0x1cccb05d982525914bcdce99f0af51556dcb8d9f0e2317c0ad0221d13a809f9"
     },
@@ -1749,6 +1769,20 @@
         {
           "name": "Some",
           "type": "core::integer::u32"
+        },
+        {
+          "name": "None",
+          "type": "()"
+        }
+      ]
+    },
+    {
+      "type": "enum",
+      "name": "core::option::Option::<core::starknet::contract_address::ContractAddress>",
+      "variants": [
+        {
+          "name": "Some",
+          "type": "core::starknet::contract_address::ContractAddress"
         },
         {
           "name": "None",
@@ -3581,6 +3615,10 @@
         {
           "name": "seed",
           "type": "core::integer::u64"
+        },
+        {
+          "name": "winner",
+          "type": "core::option::Option::<core::starknet::contract_address::ContractAddress>"
         }
       ]
     },
@@ -3665,6 +3703,10 @@
         {
           "name": "seed",
           "type": "core::integer::u64"
+        },
+        {
+          "name": "winner",
+          "type": "core::option::Option::<core::starknet::contract_address::ContractAddress>"
         }
       ]
     },
@@ -3719,6 +3761,18 @@
         {
           "name": "created",
           "type": "core::bool"
+        },
+        {
+          "name": "hp",
+          "type": "core::integer::u32"
+        },
+        {
+          "name": "atk",
+          "type": "core::integer::u32"
+        },
+        {
+          "name": "def",
+          "type": "core::integer::u32"
         }
       ]
     },
@@ -3729,6 +3783,18 @@
         {
           "name": "created",
           "type": "core::bool"
+        },
+        {
+          "name": "hp",
+          "type": "core::integer::u32"
+        },
+        {
+          "name": "atk",
+          "type": "core::integer::u32"
+        },
+        {
+          "name": "def",
+          "type": "core::integer::u32"
         }
       ]
     },

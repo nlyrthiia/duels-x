@@ -1,0 +1,13 @@
+[world]
+name = "DuelsX"
+description = "Arcane Duels - Card Battle Game on Dojo Engine"
+seed = "duels_x_seed"
+
+[namespace]
+default = "dojo_starter"
+
+[env]
+rpc_url = "https://api.cartridge.gg/x/starknet/sepolia"
+
+[writers]
+"dojo_starter" = ["dojo_starter-arcane_game"]
